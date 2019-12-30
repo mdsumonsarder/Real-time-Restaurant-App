@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="verzac.tastebuddy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".TasteBuddyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".courier_activity.OrderListActivity" />
+        <activity android:name=".customer_activity.CreateOrderActivity" />
+        <activity android:name=".courier_activity.ViewOrderActivity" />
+        <activity android:name=".customer_activity.RestaurantListActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAO6G-wR-WSofuxPfuilu3vLygNH0K1jsA" />
+
+        <activity android:name=".customer_activity.DeliveryLocationMapActivity" />
+        <activity android:name=".DeliveryStatusMapActivity" />
+        <activity android:name=".customer_activity.CustomerDeliveryStatusMapActivity" />
+        <activity android:name=".courier_activity.CourierDeliveryStatusMapActivity" />
+        <activity android:name=".AboutPageActivity"></activity>
+    </application>
+
+</manifest>

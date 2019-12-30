@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="verzac.tastebuddy.customer_activity.DeliveryLocationMapActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardElevation="10dp"
+        app:contentPadding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/deliveryStatusTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Food is being picked up"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+            </LinearLayout>
+
+
+                <ScrollView
+                    style="@android:style/Widget.Material.Light.ScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:orientation="vertical"
+                        android:animateLayoutChanges="true">
+
+                        <LinearLayout
+                            android:id="@+id/extraDeliveryInfoLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/deliveredByTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                tools:text="deliveredByTextView" />
+
+                            <TextView
+                                android:id="@+id/deliverToTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                tools:text="deliverToTextView" />
+
+                            <TextView
+                                android:id="@+id/orderMenuItemsTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                tools:text="orderMenuItemsTextView" />
+
+                            <TextView
+                                android:id="@+id/orderPriceTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                tools:text="orderMenuItemsTextView" />
+
+                        </LinearLayout>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+
+                                android:id="@+id/expandDeliveryInfoButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:background="@android:color/transparent" />
+
+                            <ImageView
+                                android:id="@+id/expandDeliveryInfoIcon"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:elevation="0dp"
+                                app:srcCompat="@drawable/ic_keyboard_arrow_down_black_18dp" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map_fragment"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/deliveryStatusContextButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:backgroundTint="@color/colorAccent"
+            android:elevation="15dp"
+            android:text="@string/button_finish_delivery"
+            android:visibility="visible"
+            android:enabled="true"
+            app:layout_anchor="@+id/map_fragment"
+            app:layout_anchorGravity="bottom|center_horizontal" />
+
+        <Button
+            android:id="@+id/cancelOrderDeliveryButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="15dp"
+            android:text="@string/button_finish_delivery"
+            android:visibility="gone"
+            app:layout_anchor="@+id/map_fragment"
+            app:layout_anchorGravity="bottom|center_horizontal" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

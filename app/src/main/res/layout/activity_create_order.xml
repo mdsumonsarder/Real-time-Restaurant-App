@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="verzac.tastebuddy.customer_activity.CreateOrderActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="495dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/restaurantLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Restaurant:"
+                android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/restaurantTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Some Restaurant" />
+
+            <TextView
+                android:id="@+id/restaurantAddressView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Some Address" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/menuLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose your meal:"
+                android:textAppearance="@android:style/TextAppearance.Material.Subhead" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/menuItemRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/createOrderButton"
+            style="@android:style/Widget.Material.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="Order" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">TasteBuddy</string>
+    <!--Prompts and texts-->
+    <string name="welcome_text">Welcome to TasteBuddy. Please sign in before using TasteBuddy.</string>
+    <string name="welcome_text_on_login">You have successfully logged in as %1$s.</string>
+    <string name="choose_prompt">Who are you today?</string>
+    <string name="prompt_choose_location1">Click on the map to choose your location.</string>
+    <string name="prompt_choose_location2">Click on the green button to confirm.</string>
+    <string name="button_finish_delivery">Finish Delivery</string>
+    <string name="button_pickup_delivery">Delivery Picked Up</string>
+    <string name="button_cancel_delivery">Cancel Delivery</string>
+    <string name="order_ordered_by">Ordered by: %1$s</string>
+    <string name="order_delivered_by">Delivered by: %1$s</string>
+    <string name="order_menuitem_list">Order Items:\n%1$s</string>
+    <string name="order_price">Price: %1$s</string>
+
+    <!--Delivery Status for Customer-->
+    <string name="status_customer_pending_order">Sending your order to couriers</string>
+    <string name="status_customer_pickup_order">A courier is currently picking up your order</string>
+    <string name="status_customer_delivery_order">Your meal is being delivered to you</string>
+    <string name="status_customer_delivered_order">Your order has been delivered. Click the green button to finish</string>
+
+    <!--Delivery Status for Courier-->
+    <string name="status_courier_pending_order">You shouldn\'t be seeing this text</string>
+    <string name="status_courier_pickup_order">Press the green button when you have picked up the meal</string>
+    <string name="status_courier_delivery_order">Press the green button when you have delivered the meal</string>
+    <string name="status_courier_delivered_order">Waiting on your customer to confirm delivery</string>
+
+    <!--Parcelables-->
+    <string name="DELIVERY_LANGLAT_KEY">DELIVERY_LANGLAT_KEY</string>
+
+    <!--Toast messages-->
+    <string name="err_location_svc_unavailable">Please enable Location Service.</string>
+    <string name="err_firebase_unavailable">Unable to access Firebase. Please try again later.</string>
+    <string name="err_user_failed_to_authenticate">TasteBuddy is unable to authenticate you. Please sign-in again.</string>
+    <string name="err_user_not_authenticated">You need to be signed-in to access this feature.</string>
+    <string name="notif_user_has_active_order">You currently have an active order.</string>
+    <string name="err_order_not_found">Unable to find order. Please try again.</string>
+
+    <!--Settings-->
+    <string name="default_web_client_id_google">
+        520766685955-m5mg0om35d77js21oi3p8eob765elghq.apps.googleusercontent.com
+    </string>
+    <string name="about_page_text">
+        Final Assignment for FIT3027\n
+        StudentID: 26520494\n
+        Authcate: btan55@student.monash.edu\n
+        \n
+        \-\-External Attribution\-\-\n
+        Google Firebase\n
+        Copyright 2017 Google Inc.\n
+        This product includes software developed at Firebase (https://www.firebase.com/terms/oss.html).\n
+        \n
+        \-\-Resources\-\-\n
+        This product includes audio/visual resources produced by Google. (https://material.io/icons/)\n
+    </string>
+</resources>
